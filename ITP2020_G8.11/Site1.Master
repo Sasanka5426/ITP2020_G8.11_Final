@@ -1,0 +1,141 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ITP2020_G8._11.Site1" %>
+ 
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    
+    <%--bootsrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--datatables css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+    <%--custom css1--%>
+    <link href="css/CustomStyleSheet1.css" rel="stylesheet" />
+
+    <%--jquery--%>
+    <script src="bootstrap/js/jquery-3.5.1.slim.min.js"></script>
+    <%--popper js--%>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <%--bootsrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <%--datatables js--%>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <img src="images/logo.png" />
+                
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse nav" id="#navbarSupportedCntent" style="background-color:#000000;">
+                    <ul class="navbar-nav mr-auto nav" >
+                        <li class="nav-item active nav">
+                            <a class="nav-link" style="color: #FFFFFF" href="MainHome.aspx">Home</a>
+                        </li>
+                        <li class="nav-item active nav">
+                            <a class="nav-link" style="color: #FFFFFF" href="viewLandsCustomer.aspx">Lands</a>
+                        </li>
+                        <li class="nav-item active nav">
+                            <a class="nav-link" style="color: #FFFFFF" href="sell_your_land_Customer.aspx">Sell Your Land</a>
+                        </li>
+                        <li class="nav-item active nav">
+                            <a class="nav-link" style="color: #FFFFFF" href="aboutUsCustomer.aspx">About</a>
+                        </li>
+                        <li class="nav-item active nav">
+                            <a class="nav-link" style="color: #FFFFFF" href="FAQ_Customer.aspx">FAQ</a>
+                        </li>
+                        <li class="nav-item active nav">
+                            <a class="nav-link" style="color: #FFFFFF" href="contactUsCustomer.aspx">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav nav">
+                        <li class="nav-itme active nav">
+                            <asp:LinkButton CssClass="nav-link" ID="LinkButton1" runat="server" style="color: #FFFFFF" Visible="False" OnClick="LinkButton1_Click1">Admin Home</asp:LinkButton>
+                        </li>
+                        <li class="nav-itme active nav">
+                            <asp:LinkButton CssClass="nav-link" ID="LinkButton2" runat="server" style="color: #FFFFFF" Visible="False" OnClick="LinkButton2_Click">Logout</asp:LinkButton>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
+            </nav> 
+        
+
+        </div>
+        <%-- <ul class="nav" >
+	        <li class="nav"><a href="#home"><b>Home</b></a></li>
+	        <li class="nav"><a href="#lands"><b>Lands</b></a></li>
+	        <li class="nav"><a href="#sellyourland"><b>Sell Your Land</b></a></li>
+	        <li class="nav"><a href="#About Us"><b>About Us</b></a></li>
+	        <li class="nav"><a href="#faq"><b>FAQ</b></a></li>
+            <li class="nav"><a href="#contact Us"><b>Contact Us</b></a></li>
+        </ul>--%>
+
+        <%--Main content placeholder--%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        
+        </div>
+        <%--Main content placeholder--%>
+
+        <footer style="background-color:#444444;">
+            <section>
+                <div class="row">
+                    <div class="col-md-2">
+                        <h6 style="color: #FFFFFF">Navigation</h6>
+                        &nbsp&nbsp&nbsp<a href="#home" class="footerlink">Home</a><br>
+                        &nbsp&nbsp&nbsp<a href="#lands" class="footerlink">Lands</a><br>
+                        &nbsp&nbsp&nbsp<a href="#sellyourland" class="footerlink">Sell Your Land</a><br>
+                        &nbsp&nbsp&nbsp<a href="#faq" class="footerlink">FAQ</a><br>
+                        
+                    </div>
+                    <div class="col-md-2">
+                        <h6 style="color: #FFFFFF">About</h6>                  
+                        &nbsp&nbsp&nbsp<a href="#home" class="footerlink">About Us</a><br>
+                        &nbsp&nbsp&nbsp<a href="#lands" class="footerlink">Contact Us</a><br>
+                       
+                        
+
+                    </div>
+                    <div class="col-md-8">
+                        <h6 style="color: #FFFFFF">Follow Us On Social Media</h6>
+                        <a href="#insta"><i class="fab fa-instagram" style="color:#FFFFFF"></i></a>&nbsp&nbsp
+                        <a href="#facebook"><i class="fab fa-facebook" style="color:#FFFFFF"></i></a>&nbsp&nbsp
+                        <a href="twitter"><i class="fab fa-twitter" style="color:#FFFFFF"></i></a>
+                        
+                        
+                        
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                       <center> <asp:LinkButton ID="LinkButton3" runat="server" class="footerlink" OnClick="LinkButton3_Click">Admin Login</asp:LinkButton></center>
+                    </div>
+                </div>
+            </section>
+
+        </footer>
+    </form>
+</body>
+</html>
