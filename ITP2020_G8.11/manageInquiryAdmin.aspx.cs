@@ -71,7 +71,7 @@ namespace ITP2020_G8._11
 
                 /*using (MailMessage mail = new MailMessage())
                 {
-                    mail.From = new MailAddress("sasanka5426@gmail.com");
+                    mail.From = new MailAddress("sendersEmail@abc.com");
                     mail.To.Add(TextBox3.Text);
                     mail.Subject = "Testing";
                     mail.Body = "<p>Thank you for your Inquiry on land </p>TextBox5.Text<p>. Testing 1</p>";
@@ -79,7 +79,7 @@ namespace ITP2020_G8._11
 
                     using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                     {
-                        smtp.Credentials = new System.Net.NetworkCredential("sasanka5426@gmail.com", "psycho54269580");
+                        smtp.Credentials = new System.Net.NetworkCredential("sendersEmail@abc.com", "password");
                         smtp.EnableSsl = true;
                         smtp.Send(mail);
                         
